@@ -1,9 +1,10 @@
 import express from 'express'
 import Axios from 'axios'
 
-const product = require('../controllers/producto')
+
 const router = express.Router()
 const client = require('../database')
+const client = require('../skus')
 
 
 
@@ -106,12 +107,8 @@ const getDetallesProducto = async (sku) => {
 
 
 router.get('/', async (req, resp) => {
-
-  skus = '["2000373380547","2000373057739","2000369527338","2000372408112","2000373604469",'
-  skus += '"2000373433229","2000373430853","2000372403506","2000373056725","2000373605732"]'
-
     try {
-        let data = await product.productos(skus)
+        let data = await product.productos(config.skus)
         resp.json(data.data.data)
       } catch (error) {
         console.log("Error : " + error.message)
