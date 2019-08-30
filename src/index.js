@@ -7,11 +7,9 @@ import cors from 'cors'
 
 const app = express()
 
-const config = require('./config/config')
-
 // Configuracion Puerto
 
-app.set('port', process.env.PORT || config.node_port)
+app.set('port', process.env.PORT || 8020)
 
 // Middlewares 
 

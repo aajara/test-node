@@ -1,8 +1,7 @@
 import redis from 'redis';
-const config = require('./config/config');
 
-const client = redis.createClient(config.redis_url, {no_ready_check: true});
-client.AUTH(config.redis_pass);
+const client = redis.createClient("redis://redis-18745.c91.us-east-1-3.ec2.cloud.redislabs.com:18745", {no_ready_check: true});
+client.AUTH("VzPXYgbHgN6SxXVpZRjgHxq2hD74eMhx");
 
 client.on('connect', function(){
     console.log('Redis conectado')
