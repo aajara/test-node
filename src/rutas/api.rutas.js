@@ -108,7 +108,7 @@ const getDetallesProducto = async (sku) => {
 
 router.get('/', async (req, resp) => {
     try {
-        let data = await product.productos(config.skus)
+        let data = await product.productos(lista.skus)
         resp.json(data.data.data)
       } catch (error) {
         console.log("Error : " + error.message)

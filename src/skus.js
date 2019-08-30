@@ -1,4 +1,4 @@
-const config ={
+const lista ={
     "skus": [
                 "2000373380547",
                 "2000373057739",
