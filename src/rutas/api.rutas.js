@@ -111,7 +111,7 @@ router.get('/', async (req, resp) => {
 
     try {
         let data = await product.productos(skus)
-        resp.json(data.data.data)
+        resp(data.data.data)
       } catch (error) {
         console.log("Error : " + error.message)
       }
