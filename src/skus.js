@@ -27,3 +27,6 @@ const lista ={
                 "2000373342491"
             ]
 }
+
+
+module.exports = lista

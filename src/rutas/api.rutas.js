@@ -1,7 +1,6 @@
 import express from 'express'
 import Axios from 'axios'
 
-
 const router = express.Router()
 const client = require('../database')
 const client = require('../skus')
@@ -107,6 +106,7 @@ const getDetallesProducto = async (sku) => {
 
 
 router.get('/', async (req, resp) => {
+
     try {
         let data = await product.productos(lista.skus)
         resp.json(data.data.data)
